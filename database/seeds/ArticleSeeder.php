@@ -3,6 +3,7 @@
 use Illuminate\Database\Seeder;
 use App\Article;
 use Faker\Generator as Faker;
+use database\seeds\AuthorSeeder;
 
 
 class ArticleSeeder extends Seeder
@@ -32,7 +33,7 @@ class ArticleSeeder extends Seeder
         $article->title = $faker->sentence();
         $article->subtitle = $faker->sentence();
         $article->description = $faker->paragraph(3);
-
+        // $article->authorID = array_rand($authorList, 1);
         $randPictureKey = array_rand($pictureList, 1);
         $picture = $pictureList[$randPictureKey];
         $article->picture = $picture;

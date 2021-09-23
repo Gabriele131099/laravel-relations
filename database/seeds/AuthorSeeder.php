@@ -16,11 +16,12 @@ class AuthorSeeder extends Seeder
         for($i = 0; $i < 10; $i++) {
             // creo gli authori
             $author = new Author();
-            
+
             $author->name = $faker->words(1, true);
             $author->surname = $faker->words(1, true);
             $author->save();
             }
+      
 
     }
 }
